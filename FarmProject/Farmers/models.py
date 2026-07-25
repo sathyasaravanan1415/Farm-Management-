@@ -5,3 +5,6 @@ class Farmer(models.Model):
     phone=models.CharField(max_length=100)
     email=models.EmailField()
     address=models.TextField()
+
+    def __str__(self):
+        return self.name
