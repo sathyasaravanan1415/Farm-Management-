@@ -5,6 +5,11 @@ class Farmer(models.Model):
     phone=models.CharField(max_length=100)
     email=models.EmailField()
     address=models.TextField()
+    village = models.CharField(max_length=100)
+    district = models.CharField(max_length=100)
+    state = models.CharField(max_length=100)
+    pincode = models.CharField(max_length=6)
+
 
     def __str__(self):
         return self.name
