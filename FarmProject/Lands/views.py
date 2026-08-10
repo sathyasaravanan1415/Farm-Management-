@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from .models import land 
+from .serializers import landSerializer 
 
-# Create your views here.
+class landViewSet(viewsets.ModelViewSet):
+    queryset=land.objects.all()
+    serializer_class=landSerializer
