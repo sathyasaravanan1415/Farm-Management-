@@ -20,7 +20,7 @@ class CropSerializer(serializers.ModelSerializer):
                     "Quantity must be greater than 0.")
             return value
 
-    def validate(self, data):
+    def validate_harvest(self, data):
             if data["harvest_date"] < data["sowing_date"]:
 
                 raise serializers.ValidationError(
@@ -28,15 +28,15 @@ class CropSerializer(serializers.ModelSerializer):
         
             return data
 
-    def validate(self,sowing_date):
+    def validate_sowing(self,sowing_date):
          if sowing_date > date.today():
               raise serializers.ValidationError("Invalid sowing date")
          return sowing_date
 
 
-    def validate(self,status):
-         allowed=["Planned","Growing","Harvested"]
-         if status not in allowed:
+    def validate_status(self,status):
+         allowed=["planned","growing","harvested"]
+         if status.lower() not in allowed:
               raise serializers.ValidationError("Invalid crop status")
          return status
          
