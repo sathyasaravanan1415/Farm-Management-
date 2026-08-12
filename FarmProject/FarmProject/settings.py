@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'Farmers',
     'Accounts',
     'Lands',
+    'Crops',
     'rest_framework',
     
 ]

@@ -1,3 +1,8 @@
 from django.shortcuts import render
+from rest_framework import viewsets
+from .models import crop
+from .serializers import CropSerializer
 
-# Create your views here.
+class cropviewset(viewsets.ModelViewSet):
+    queryset=crop.objects.all()
+    serializer_class=CropSerializer
