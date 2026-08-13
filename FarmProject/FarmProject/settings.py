@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'Accounts',
     'Lands',
     'Crops',
+    'Inventory',
     'rest_framework',
     
 ]

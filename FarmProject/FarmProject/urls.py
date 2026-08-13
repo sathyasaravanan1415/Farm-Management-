@@ -22,5 +22,6 @@ urlpatterns = [
     path('api/',include('Farmers.urls')),
     path('api/',include('Lands.urls')),
     path('api/',include("Crops.urls")),
+    path('api/',include("Inventory.urls")),
     
 ]
