@@ -23,5 +23,6 @@ urlpatterns = [
     path('api/',include('Lands.urls')),
     path('api/',include("Crops.urls")),
     path('api/',include("Inventory.urls")),
+    path('api/',include("Expenses.urls")),
     
 ]
