@@ -24,5 +24,6 @@ urlpatterns = [
     path('api/',include("Crops.urls")),
     path('api/',include("Inventory.urls")),
     path('api/',include("Expenses.urls")),
+    path('api/',include("Sales.urls")),
     
 ]
