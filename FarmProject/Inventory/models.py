@@ -1,7 +1,5 @@
 from django.db import models
-
-from django.db import models
-
+from Farmers.models import Farmer
 
 class Inventory(models.Model):
 
@@ -20,6 +18,13 @@ class Inventory(models.Model):
         ("bag", "Bag"),
     ]
 
+    farmer = models.ForeignKey(
+        Farmer,
+        on_delete=models.CASCADE,
+        related_name="inventory"
+        
+    )
+ 
     name = models.CharField(max_length=100)
     category = models.CharField(
         max_length=50,
