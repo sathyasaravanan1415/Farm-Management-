@@ -1,5 +1,4 @@
 from django.db import models
-
 from Farmers.models import Farmer
 from Crops.models import crop
 
@@ -40,4 +39,4 @@ class Sale(models.Model):
     )
 
     def __str__(self):
-        return f"{self.crop} - {self.total_amount}"
+        return f"{self.Crop} - {self.total_amount}"
